@@ -49,7 +49,8 @@ const AdminDashboard = () => {
         try {
             const response = await fetch(getContactsApi, {
                 method: "GET",
-                headers: { "Content-Type": "application/json" }
+                headers: { "Content-Type": "application/json" },
+                credentials:"include"
             })
 
             if (!response.ok) {
